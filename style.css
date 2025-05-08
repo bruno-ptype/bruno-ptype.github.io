@@ -2,7 +2,10 @@
 *{
     color:var(--color-texto) !important;
 }
+
 /*parametros de colores para proyecto*/
+
+
 :root{
     --color-primario: #b8b08d;
     --color-secundario: #283845;
@@ -10,11 +13,20 @@
     --color-terciario: #f29559;
     --color-texto: #ffffff;
 }
-/*parametros para que html use todo el espacio disponible*/
-html {
 
+/*parametros para que html use todo el espacio disponible*/
+
+html {
     min-height: 100%;
     position: relative;
+}
+
+.fixedSize {
+ 
+    display: grid;
+    min-height: 100dvh;
+    grid-template-rows: 
+        auto 1fr auto;
 }
 
 /*parametros para body*/
@@ -26,10 +38,11 @@ body {
     margin: 0;
     padding: 0;
     background-size: cover;
-    background-attachment: fixed;
-    display: block;
+    display: grid;
+    min-height: 100vh;
+    grid-template-rows: auto 1fr auto;
     margin-bottom: 40px;
-
+    
 }
 
 /*parametros para titulo y subtitulo*/
@@ -110,13 +123,15 @@ nav ul li {
 
 /*parametros para footer*/
 
-footer{
+footer {
     background-color: var(--color-terciario);
     margin-bottom: 40px;
     width: 100%;
+    padding: 1em 0;
     bottom: 0;
     color: var(--color-texto);
     position: absolute;
+    margin-top: auto;
 }
 
 /*parametros para form (desde form hasta input type = "submit")*/
