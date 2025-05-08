@@ -1,4 +1,3 @@
-
 *{
     color:var(--color-texto) !important;
 }
@@ -12,21 +11,6 @@
     --color-nav: #202c39;
     --color-terciario: #f29559;
     --color-texto: #ffffff;
-}
-
-/*parametros para que html use todo el espacio disponible*/
-
-html {
-    min-height: 100%;
-    position: relative;
-}
-
-.fixedSize {
- 
-    display: grid;
-    min-height: 100dvh;
-    grid-template-rows: 
-        auto 1fr auto;
 }
 
 /*parametros para body*/
@@ -121,18 +105,6 @@ nav ul li {
     font-size: 20px; 
 }
 
-/*parametros para footer*/
-
-footer {
-    background-color: var(--color-terciario);
-    margin-bottom: 40px;
-    width: 100%;
-    padding: 1em 0;
-    bottom: 0;
-    color: var(--color-texto);
-    position: absolute;
-    margin-top: auto;
-}
 
 /*parametros para form (desde form hasta input type = "submit")*/
 
@@ -150,6 +122,16 @@ label {
     margin-bottom: 5px;
     font-weight: bold;
 }
+
+.img-thumbnail {
+    transition: transform 0.3s ease;
+    margin-bottom: 1rem;
+}
+
+.img-thumbnail:hover {
+    transform: scale(1.05);
+}
+
 
 input, select, textarea {
     width: 100%;
@@ -210,5 +192,3 @@ select {
   select:focus {
     background-color: var(--color-terciario);
   }
-
-  
