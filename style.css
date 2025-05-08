@@ -69,23 +69,22 @@ nav ul li {
 /* parametros para clase: photo (sección)*/
 
 .photo {
-
-    margin: 90px;
-    padding: 20px;
-    background: var(--color-secundario);
-    border-radius: 10px;
+    margin: 20px auto;
+    padding: 10px;
+    border-radius: 5px;
     justify-content: center;
-    display: flex;
-    max-width: 90%;
-
-}  
+    align-items: center;
+}
 
 /*parametros para imagen de clase*/
 
 .photo img {
     max-width: 100%;
+    margin: 20px auto;
     height: auto;
     display: block;
+    align-items: center;
+    justify-content: center;
 }
 
 /*parametros para transición de NavBar*/
@@ -108,13 +107,26 @@ nav ul li {
 
 /*parametros para form (desde form hasta input type = "submit")*/
 
+.container-form {
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    height: 100vh; 
+}
+
+
+
 form {
-    max-width: 600px;
+
+    width: 80%;
+    max-width: 1200px;
     margin: 0 auto;
     background: var(--color-secundario);
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 0 10px var(--color-nav);
+    max-height: 650px;
+
 }
 
 label {
@@ -139,11 +151,13 @@ input, select, textarea {
     margin-bottom: 15px;
     border: 1px solid var(--color-nav);
     border-radius: 4px;
+    max-width: 100%;
 }
 
 
 input[type="submit"] {
     background-color:var(--color-secundario);
+    max-width: 100%;
     color: var(--color-nav);
     border: none;
     cursor: pointer;
