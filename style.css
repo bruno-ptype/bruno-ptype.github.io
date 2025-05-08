@@ -10,6 +10,12 @@
     --color-terciario: #f29559;
     --color-texto: #ffffff;
 }
+/*parametros para que html use todo el espacio disponible*/
+html {
+
+    min-height: 100%;
+    position: relative;
+}
 
 /*parametros para body*/
 
@@ -22,7 +28,8 @@ body {
     background-size: cover;
     background-attachment: fixed;
     display: block;
-    
+    margin-bottom: 40px;
+
 }
 
 /*parametros para titulo y subtitulo*/
@@ -44,7 +51,7 @@ p {
     line-height: 1.5;
     margin-bottom: 20px;
     text-align: center;
-    font-size: 20px;
+    font-size: 24px;
 }
 
 /* parametros para barra de busqueda*/
@@ -105,9 +112,11 @@ nav ul li {
 
 footer{
     background-color: var(--color-terciario);
-    padding: 8px;
-    margin-bottom: auto;
-    margin-top: auto;
+    margin-bottom: 40px;
+    width: 100%;
+    bottom: 0;
+    color: var(--color-texto);
+    position: absolute;
 }
 
 /*parametros para form (desde form hasta input type = "submit")*/
