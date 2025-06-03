@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bansky Art</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./style.css">
+
+    <!-- Scripts -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="./index.html">Bansky Art</a>
+            </div>
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="./index.html">Home</a></li>
+                <li><a href="./galeria.html">Galeria de Arte</a></li>
+                <li><a href="./contacto.html">Contactános</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Formulario de consulta -->
+    <div class="container-form">
+        <form id="formContacto">
+            
+            <!-- Nombre y Correo -->
+            <input type="text" class="form-control" id="nombre" placeholder="Tu nombre">
+            <input type="email" class="form-control" id="email" placeholder="name@example.com">
+
+            <!-- Tipo de solicitud -->
+            <select class="form-control" id="tipo">
+                <option value="" disabled selected>Seleccione una opción</option>
+                <option value="compra">Compra</option>
+                <option value="consulta">Consulta</option>
+                <option value="venta">Venta</option>
+            </select>
+
+            <!-- Mensaje -->
+            <div class="form-group">
+                <label for="mensaje">Mensaje</label>
+                <textarea class="form-control" id="mensaje" rows="3"></textarea>
+            </div>
+
+            <!-- Botón de enviar -->
+            <input type="submit" value="Enviar">
+
+            <!-- Punto de validación -->
+            <div id="resultado"></div>
+        </form>
+    </div>
+
+    <!-- Script para manejar el formulario -->
+    <script src="js/contacto.js" defer></script>
+
+</body>
+</html>
