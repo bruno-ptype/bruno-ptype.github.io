@@ -257,3 +257,17 @@ select {
 .close:hover {
     color: var(--color-terciario);
 }
+
+.eliminar-btn {
+  width: 60px; /* Ajusta el ancho del botón */
+  height: 60px; /* Ajusta la altura del botón */
+  border-radius: 50%; /* Hace que el botón sea circular */
+  background-color: var(--color-nav); /* Cambia el color de fondo */
+  color: white; /* Cambia el color del texto */
+  text-align: center; /* Asegura que el texto esté alineado */
+  padding: 10px; /* Espaciado interno */
+  display: flex; /* Usa flexbox */
+  align-items: center; /* Centra verticalmente */
+  justify-content: center; /* Centra horizontalmente */
+  font-size: 14px; /* Ajusta el tamaño de la fuente si es necesario */
+}
