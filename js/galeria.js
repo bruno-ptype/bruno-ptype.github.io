@@ -6,19 +6,6 @@ function mostrarDetalle(nombreObra) {
     modal.style.display = "flex"; 
 }
 
-// Para que el Modal no inicie al abrir la pag
-
-document.addEventListener("DOMContentLoaded", function() {
-    const modal = document.getElementById("modal");
-    modal.style.display = "none"; 
-});
-
-
-// Cierra el modal
-function cerrarModal() {
-    document.getElementById("modal").style.display = "none";
-}
-
 // Funciones para mostrar la informacion del cuadro 
 
 const imagenes = document.querySelectorAll(".img-thumbnail");
@@ -28,6 +15,19 @@ imagenes.forEach(function(img) {
         mostrarDetalle(nombre); 
     });
 });
+
+// Cierra el modal
+function cerrarModal() {
+    document.getElementById("modal").style.display = "none";
+}
+
+// Para que el Modal no inicie al abrir la pag
+
+document.addEventListener("DOMContentLoaded", function() {
+    const modal = document.getElementById("modal");
+    modal.style.display = "none"; 
+});
+
 
 // Boton para eliminar la imagen 
 const botonesEliminar = document.querySelectorAll(".eliminar-btn");

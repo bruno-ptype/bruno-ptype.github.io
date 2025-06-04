@@ -9,28 +9,24 @@ document.getElementById("formContacto").addEventListener("submit", function(even
     const resultado = document.getElementById("resultado");
     let tipo = document.getElementById("tipo").value;
 
-// Validación de campos vacíos
-    if (!nombre || !email || !mensaje) {
-        resultado.innerHTML = '<div class="alert alert-danger">Completa todos los campos, por favor.</div>';
-        return;
-    }
+// Validador de campos
 
-// Validación correo
-    const emailValido = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
-    if (!emailValido) {
-        resultado.innerHTML = '<div class="alert alert-danger">Ingresa un correo electrónico válido.</div>';
-        return;
-    }
+if (!nombre.length || !email.length || !mensaje.length) {
+    resultado.innerHTML = "<div class='alert alert-danger'>Error: por favor, rellena los campos solicitados.</div>";
+    return;
+}
+ // Identificador de solicitud segun mensaje
 
-// Asignacion al tipo de solicitud
-    const palabrasClave = { "compra": "Compra", "venta": "Venta" };
-    Object.keys(palabrasClave).forEach(clave => {
-        if (mensaje.toLowerCase().includes(clave)) {
-            tipo = palabrasClave[clave];
-        }
-    });
+    if (mensaje.toLowerCase().includes("compra")) {
+        tipo = "Compra";
+    } else if (mensaje.toLowerCase().includes("venta") || mensaje.toLowerCase().includes("vender")) {
+        tipo = "Venta";
+    } else if (mensaje.toLowerCase().includes("consulta") || mensaje.toLowerCase().includes("preguntar")){
+        tipo = "Consulta"
+    }
 
 // Mensaje de confirmación
+
     resultado.innerHTML = `
         <div class="alert alert-success">
             Estimado ${nombre}, tu solicitud ha sido recibida. Recibirás un correo con la información solicitada.<br>
